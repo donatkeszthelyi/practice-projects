@@ -40,13 +40,13 @@ def draw_bar_plot():
     df_bar = df.resample('M').mean()
     df_bar['Year'] = pd.to_datetime(df_bar.index.values).year
     df_bar['Month'] = pd.to_datetime(df_bar.index.values).month_name()
-
-    # Draw bar plot
-    fig, ax = plt.subplots(figsize=(7, 7))
     months_in_order = ['January', 'February', 'March', 'April', 'May', 'June',
                         'July', 'August', 'September', 'October', 'November', 'December']
     pivot_df = df_bar.pivot(index='Year', columns='Month', values='value')
     pivot_df = pivot_df[months_in_order]
+
+    # Draw bar plot
+    fig, ax = plt.subplots(figsize=(7, 7))
     pivot_df.plot(kind='bar', ax=ax)
     ax.set_xlabel('Years')
     ax.set_ylabel('Average Page Views')
