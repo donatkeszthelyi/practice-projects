@@ -58,9 +58,17 @@ def add_time(start, duration, dayName=''):
     new_time = endHour + ':' + endMinute + ' ' + AMPM + dayName + m
     
     return new_time
+    
+a = True
+while a == True:
+    try:
+        time = input('Enter a time (HH:MM AM/PM):')
+        duration = input('Enter a time to spend (HH:MM):')
+        day = input('Enter the day (optional):')
 
-time = input('Enter a time (HH:MM AM/PM):')
-duration = input('Enter a time to spend (HH:MM):')
-day = input('Enter the day (optional):')
+        print(add_time(time, duration, day))
+        a = False
+    except:
+        print('\nWrong input, try again!\n')
+        continue
 
-print(add_time(time, duration, day))
