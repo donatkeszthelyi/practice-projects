@@ -1,4 +1,4 @@
-def arithmetic_arranger(problems, show_answers=False):
+def arithmetic_arranger(problems, show_answers=True):
 
     firstNums = []
     secNums = []
@@ -88,5 +88,5 @@ def arithmetic_arranger(problems, show_answers=False):
 
     return problems
 
-p = ('12 + 56', '1111 + 9999')
-print(arithmetic_arranger(p, True))
+p = input('Please enter your addition/substraction problems (x+y, a-b):'
+print(arithmetic_arranger(p))
