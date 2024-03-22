@@ -88,5 +88,5 @@ def arithmetic_arranger(problems, show_answers=True):
 
     return problems
 
-p = input('Please enter your addition/substraction problems (x+y, a-b):'
+p = input('Please enter your addition/substraction problems in this form: ("x+y", "a-b")! Here:')
 print(arithmetic_arranger(p))
